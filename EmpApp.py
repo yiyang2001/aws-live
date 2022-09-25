@@ -66,8 +66,9 @@ def AddEmp():
             else:
                 s3_location = '-' + s3_location
 
-            object_url = "https://{0}.s3.amazonaws.com/{1}".format(
+            object_url = "https://{0}.s3.amazonaws.com/{1}/{2}".format(
                 custombucket,
+                'media',
                 emp_image_file_name_in_s3)
 
         except Exception as e:
